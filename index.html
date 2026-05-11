@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Motors</title>
+       <link rel="icon" type="image/x-icon" href="Images/Logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-wordmark">
+    <div class="loader-em">ELITE MOTORS</div>
+    <div class="loader-sub">معرض السيارات الفاخرة</div>
+  </div>
+  <div class="loader-track">
+    <div class="loader-fill"></div>
+  </div>
+  <div class="loader-pct" id="loaderPct">0%</div>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#home" class="nav-logo" onclick="closeMenu()">
+    ELITE MOTORS<span class="dot"></span>
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="القائمة" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="#home" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#cars" onclick="closeMenu()">Cars</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+    <div class="drawer-divider"></div>
+    <div class="drawer-bottom">
+      <button class="drawer-cta" onclick="closeMenu()">حجز موعد</button>
+      <div class="drawer-social">
+        <a href="#" aria-label="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.553 4.118 1.524 5.849L.057 23.428a.5.5 0 00.601.633l5.706-1.453A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.702-.512-5.243-1.409l-.364-.216-3.755.957.978-3.668-.235-.378A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg-image" id="heroBg">
+    <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?w=1800&q=85&auto=format&fit=crop" alt="Supercar hero"/>
+  </div>
+  <div class="hero-vignette"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-content" id="heroContent">
+      <div class="hero-eyebrow">معرض السيارات الفاخرة</div>
+      <h1 class="hero-h1">ELITE<br/><em>MOTORS</em></h1>
+      <p class="hero-desc">نقدّم أرقى السيارات الفاخرة والسوبر كار بأعلى مستوى من الخدمة والثقة. اكتشف أسطولنا المتميز من أفخم الماركات العالمية.</p>
+      <div class="hero-actions">
+        <a href="#cars" class="btn-gold"><span>استعرض السيارات</span></a>
+        <a href="#contact" class="btn-ghost">تواصل معنا</a>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span>تمرر للأسفل</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-num" data-target="120" data-suffix="+">0</span>
+    <span class="stat-label">سيارة في المعرض</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num" data-target="12" data-suffix="+">0</span>
+    <span class="stat-label">سنوات خبرة</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num" data-target="850" data-suffix="+">0</span>
+    <span class="stat-label">عميل راضٍ</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-layout">
+    <div class="rv-l">
+      <span class="about-label">✦ من نحن</span>
+      <h2 class="section-h">ABOUT<br/>US</h2>
+      <div class="section-bar"></div>
+      <p class="about-text">
+        نحن <strong>Elite Motors</strong> — معرض متخصص في السيارات الفاخرة والسوبر كار منذ أكثر من عشر سنوات. نؤمن بأن كل عميل يستحق تجربة استثنائية تبدأ من لحظة دخوله معرضنا وتمتد مع كل رحلة يقطعها بسيارته الجديدة.
+      </p>
+      <p class="about-text">
+        نقدم أفضل الماركات العالمية بضمان كامل وخدمة ما بعد البيع الراقية، مع فريق متخصص يضمن لك أفضل تجربة شراء.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Ferrari</span>
+        <span class="tag">Lamborghini</span>
+        <span class="tag">McLaren</span>
+        <span class="tag">Porsche</span>
+        <span class="tag">Mercedes AMG</span>
+        <span class="tag">BMW M</span>
+      </div>
+    </div>
+    <div class="rv-r" style="transition-delay:.1s">
+      <div class="about-features">
+        <div class="feat-item">
+          <div class="feat-icon">🛡️</div>
+          <div class="feat-text">
+            <h4>ضمان شامل</h4>
+            <p>ضمان كامل على جميع السيارات مع خدمة ما بعد البيع</p>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">💎</div>
+          <div class="feat-text">
+            <h4>سيارات أصلية 100%</h4>
+            <p>جميع سياراتنا أصلية بوثائق وتاريخ صيانة كامل</p>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🚀</div>
+          <div class="feat-text">
+            <h4>تسليم فوري</h4>
+            <p>خدمة توصيل احترافية لأي مكان في مصر والخليج</p>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">💳</div>
+          <div class="feat-text">
+            <h4>تمويل ميسّر</h4>
+            <p>خطط تمويل مرنة بالتعاون مع أكبر البنوك</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CARS -->
+<section id="cars">
+  <div class="cars-head">
+    <div>
+      <span class="about-label rv">✦ أسطولنا</span>
+      <h2 class="section-h rv" style="transition-delay:.08s">TOP CARS</h2>
+      <div class="section-bar rv" style="transition-delay:.13s"></div>
+    </div>
+    <a href="cars.html" class="btn-ghost rv" style="transition-delay:.18s;align-self:flex-end;white-space:nowrap;">عرض الكل ←</a>
+  </div>
+  <div class="car-filters rv" style="transition-delay:.1s">
+    <button class="filter-btn active" data-filter="all">الكل</button>
+    <button class="filter-btn" data-filter="available">متاحة</button>
+    <button class="filter-btn" data-filter="sold">مباعة</button>
+  </div>
+  <div class="cars-grid" id="carsGrid"></div>
+  <div class="cars-footer-row rv" style="transition-delay:.1s;margin-top:2.8rem">
+    <a href="cars.html" class="btn-gold"><span>استعرض كل السيارات →</span></a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="process-header">
+    <span class="about-label rv">✦ كيف نعمل</span>
+    <h2 class="section-h rv" style="transition-delay:.08s">HOW IT<br/>WORKS</h2>
+    <div class="section-bar rv" style="margin:.8rem auto 0;transition-delay:.13s"></div>
+  </div>
+  <div class="process-grid">
+    <div class="process-step rv">
+      <span class="step-num">01</span>
+      <div class="step-icon">🔍</div>
+      <div class="step-title">اختر سيارتك</div>
+      <p class="step-desc">تصفح مجموعتنا الحصرية واختر السيارة التي تناسب ذوقك ومتطلباتك</p>
+      <div class="step-line"></div>
+    </div>
+    <div class="process-step rv" style="transition-delay:.07s">
+      <span class="step-num">02</span>
+      <div class="step-icon">📅</div>
+      <div class="step-title">حجز معاينة</div>
+      <p class="step-desc">احجز موعدك لمعاينة السيارة بكل تفاصيلها في معرضنا الفاخر</p>
+      <div class="step-line"></div>
+    </div>
+    <div class="process-step rv" style="transition-delay:.14s">
+      <span class="step-num">03</span>
+      <div class="step-icon">✅</div>
+      <div class="step-title">إتمام الصفقة</div>
+      <p class="step-desc">نقدم لك أفضل الأسعار مع خيارات تمويل مرنة تناسب احتياجاتك</p>
+      <div class="step-line"></div>
+    </div>
+    <div class="process-step rv" style="transition-delay:.21s">
+      <span class="step-num">04</span>
+      <div class="step-icon">🚗</div>
+      <div class="step-title">استلم سيارتك</div>
+      <p class="step-desc">استلم سيارتك الجديدة مع ضمان كامل وخدمة ما بعد البيع المتميزة</p>
+      <div class="step-line"></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div style="max-width:900px;margin:0 auto;">
+    <span class="about-label rv">✦ تواصل معنا</span>
+    <h2 class="section-h rv" style="transition-delay:.08s">CONTACT</h2>
+    <div class="section-bar rv" style="margin-bottom:2.5rem;transition-delay:.13s"></div>
+  </div>
+  <div class="contact-layout">
+    <div class="rv-l">
+      <div class="map-container">
+        <div class="map-visual">
+          <div class="map-pin"></div>
+          <p>موقع المعرض<br/>القاهرة، مصر</p>
+        </div>
+        <div class="map-addr-bar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>شارع التحرير، وسط البلد — القاهرة</span>
+        </div>
+      </div>
+    </div>
+    <div class="rv-r" style="transition-delay:.1s">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="field">
+            <label>الاسم</label>
+            <input type="text" id="fName" placeholder="اسمك الكريم" autocomplete="name"/>
+          </div>
+          <div class="field">
+            <label>الهاتف</label>
+            <input type="tel" id="fPhone" placeholder="+20 1xx xxx xxxx" autocomplete="tel" dir="ltr"/>
+          </div>
+        </div>
+        <div class="field">
+          <label>البريد الإلكتروني</label>
+          <input type="email" id="fEmail" placeholder="example@email.com" autocomplete="email" dir="ltr"/>
+        </div>
+        <div class="field">
+          <label>السيارة التي تبحث عنها</label>
+          <select id="fCar">
+            <option value="">اختر الماركة...</option>
+            <option>Ferrari</option>
+            <option>Lamborghini</option>
+            <option>McLaren</option>
+            <option>Porsche 911</option>
+            <option>Mercedes AMG</option>
+            <option>BMW M Series</option>
+            <option>أخرى</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>رسالتك</label>
+          <textarea id="fMsg" placeholder="اكتب استفسارك أو رسالتك هنا..."></textarea>
+        </div>
+        <button class="btn-wa" onclick="sendWhatsApp()">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.553 4.118 1.524 5.849L.057 23.428a.5.5 0 00.601.633l5.706-1.453A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.702-.512-5.243-1.409l-.364-.216-3.755.957.978-3.668-.235-.378A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          إرسال عبر واتساب
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">ELITE MOTORS</div>
+      <div class="footer-tagline">معرض السيارات الفاخرة · منذ 2012</div>
+    </div>
+    <div class="footer-col">
+      <h5>روابط سريعة</h5>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#cars">السيارات</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>ماركاتنا</h5>
+      <ul>
+      <li><a href="#">Bmw</a></li>
+        <li><a href="#">Marcedes</a></li>
+        <li><a href="#">Ferrari</a></li>
+        <li><a href="#">Lamborghini</a></li>
+        <li><a href="#">McLaren</a></li>
+        <li><a href="#">Porsche</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 Elite Motors. جميع الحقوق محفوظة.</div>
+    <div class="footer-copy">القاهرة، مصر · +20 100 000 0000</div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="btt" id="btt" aria-label="العودة للأعلى" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✦</span>
+  <span id="toastMsg"></span>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal" id="modalInner">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img id="modalImg" class="modal-img" src="" alt=""/>
+    <div class="modal-body">
+      <div class="modal-brand" id="modalBrand"></div>
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-year" id="modalYear"></div>
+      <div class="modal-specs">
+        <div class="modal-spec">
+          <span class="modal-spec-v" id="mHp">—</span>
+          <span class="modal-spec-l">HP</span>
+        </div>
+        <div class="modal-spec">
+          <span class="modal-spec-v" id="mSpd">—</span>
+          <span class="modal-spec-l">السرعة</span>
+        </div>
+        <div class="modal-spec">
+          <span class="modal-spec-v" id="mAcc">—</span>
+          <span class="modal-spec-l">0–100</span>
+        </div>
+      </div>
+      <div class="modal-price" id="mPrice"></div>
+      <a href="#contact" class="btn-gold" style="width:100%;justify-content:center;" onclick="closeModal()"><span>استفسر الآن →</span></a>
+    </div>
+  </div>
+</div>
+<script src="script/script.js"></script>
+</body>
+</html>
